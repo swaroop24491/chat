@@ -1,2 +1,2 @@
 # chat
-sample chat application
+sample chat application using socket.io
