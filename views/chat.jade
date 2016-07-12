@@ -1,0 +1,19 @@
+doctype
+html
+  head
+    title chat app
+    link(rel='stylesheet', href='/style.css')
+    script(src="/socket.io/socket.io.js")
+    script.
+      var socket = io()
+      window.name = '#{name}'
+    script(src="//code.jquery.com/jquery-1.11.1.js")
+    script(src="/client.js")
+  body
+    div(style="color:green;font-size:1rem") Welcome #{name}!
+    br
+    ul#messages
+    form(action="")
+      input(type='text', id="m" autocomplete='off')
+      input(type="submit", value="send")
+

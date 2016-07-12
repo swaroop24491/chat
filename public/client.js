@@ -2,7 +2,7 @@ $(function(){
 	var socket = io();
 	$('form').on('submit', function(e){
 		e.preventDefault();
-		socket.emit('chat message', $('#m').val());
+		socket.emit('chat message', window.name + " says: " + $('#m').val());
 		$('#m').val('');
 		return false;
 	});
