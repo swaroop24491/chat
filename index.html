@@ -2,19 +2,13 @@
 <html>
   <head>
     <title>chat app</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; top: 50%; width: 100%;    left: 0;
-    right: 0;
-    text-align: center; }
-      form input { border: 0; padding: 10px; width: 50%; }
-      form input[type="submit"] { width: 9%; background: green; cursor:pointer; color: #f2f2f2; border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
@@ -25,7 +19,7 @@
 
   </head>
   <body>
-    <form action="/chat" method="post">
+    <form action="/chat" method="post" id="login_form">
       <input type="text" id="name" name="name" autocomplete="off" placeholder="name"/>
       <input type="submit" value="login"/>
     </form>
