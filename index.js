@@ -26,9 +26,9 @@ app.post('/chat', function(req, res){
 });
 
 io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-  	console.log("Received chat msg" + msg);
-    io.emit('chat message', msg);
+  socket.on('chat message', function(obj){
+  	console.log("Received chat msg" + obj.message);
+    io.emit('chat message', obj);
   });
 });
 
